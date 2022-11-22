@@ -9,13 +9,13 @@ int gameScreen = 0;
 int ballX, ballY;
 int ballSize = 20;
 int ballColor = color(200, 0, 0);
-float gravity = 0.25;
+float gravity = 0.15;
 float ballSpeedVert = 0;
 float ballSpeedHorizon = 3;
 float airfriction = 0.0001;
 float friction = 0.1;
 color racketColor = color(0);
-float racketWidth = 100;
+float racketWidth = 250;
 float racketHeight = 10;
 int racketBounceRate = 20;
 int score = 0;
@@ -89,7 +89,7 @@ void restart() {
   gameScreen = 0;
   score = 0;
   setup();
-  gravity = 0.25;
+  gravity = 0.15;
   ballSpeedVert = 0;
   ballSpeedHorizon = 3;
 }
