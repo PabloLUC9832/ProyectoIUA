@@ -165,13 +165,15 @@ void drawRacket() {
 }
 //Cuando la pelota golpea con la raqueta
 void watchRacketBounce() {
-  float overhead = posY - pmouseY;
+  //overhead- variable para cuando se este tocando la raqueta 
+  float overhead = posY;
   if ((ballX+(ballSize/2) > posX-(racketWidth/2)) && (ballX-(ballSize/2) < posX+(racketWidth/2))) {
     if (dist(ballX, ballY, ballX, posY)<=(ballSize/2)+abs(overhead)) {
       if ((ballX+(ballSize/2) > posX-(racketWidth/2)) && (ballX-(ballSize/2) < posX+(racketWidth/2))) {
         if (dist(ballX, ballY, ballX, posY)<=(ballSize/2)+abs(overhead)) {
+          //Mientras se este tocando la raqueta, esta aumentara el puntaje en 1
           makeBounceBottom(posY);
-          // racket moving up
+          // Al mover la raqueta
           if (overhead<0) {
             ballY+=overhead;
             ballSpeedVert+=overhead;
